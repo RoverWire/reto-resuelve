@@ -3,14 +3,14 @@ gem 'grape'
 gem 'grape-swagger'
 
 group :development, :test do
-  gem 'rspec'
   gem 'airborne'
   gem 'pry'
+  gem 'rspec'
 end
 
 group :development do
-  gem 'rubocop'
   gem 'guard'
   gem 'guard-rack'
   gem 'guard-rubocop'
+  gem 'rubocop'
 end
