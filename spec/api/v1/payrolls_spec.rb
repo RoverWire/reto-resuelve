@@ -9,9 +9,9 @@ describe API::V1::Payrolls do
   end
 
   context 'POST /api/v1/payrolls/calculate' do
-    it 'returns 400 response with an empty request' do
+    it 'returns 201 response with an empty request' do
       post '/api/v1/payrolls/calculate'
-      expect_status(400)
+      expect_status(201)
     end
   end
 end
