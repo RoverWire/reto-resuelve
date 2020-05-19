@@ -1,3 +1,5 @@
+require 'rubygems'
+require 'rack/test'
 require 'pry'
 require 'airborne'
 require_relative '../api/root'
