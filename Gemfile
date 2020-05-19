@@ -12,5 +12,10 @@ group :development do
   gem 'guard'
   gem 'guard-rack'
   gem 'guard-rubocop'
+  gem 'rake'
   gem 'rubocop'
+end
+
+group :test do
+  gem 'rack-test'
 end
