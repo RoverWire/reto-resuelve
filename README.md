@@ -21,3 +21,9 @@ Para ejecutar en una máquina local:
 ```bash
 bundle exec rackup
 ```
+
+Si desea recargar rackup automáticamente al editar un archivo use:
+
+```bash
+bundle exec guard
+```

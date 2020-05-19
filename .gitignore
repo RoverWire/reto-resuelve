@@ -1,0 +1,4 @@
+.bundle
+coverage/
+.rvmrc
+api/v2
