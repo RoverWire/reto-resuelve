@@ -7,4 +7,11 @@ describe API::V1::Payrolls do
       expect_status(200)
     end
   end
+
+  context 'POST /api/v1/payrolls/calculate' do
+    it 'returns 400 response with an empty request' do
+      post '/api/v1/payrolls/calculate'
+      expect_status(400)
+    end
+  end
 end
