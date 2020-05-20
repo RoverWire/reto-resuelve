@@ -1,6 +1,3 @@
-require 'grape'
-require 'grape-swagger'
-require 'pry'
 require_relative './v1/payrolls'
 
 module API

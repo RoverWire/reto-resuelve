@@ -1,4 +1,4 @@
-require_relative '../../spec_helper'
+require 'spec_helper'
 
 describe API::V1::Payrolls do
   context 'GET /api/v1/payrolls/' do

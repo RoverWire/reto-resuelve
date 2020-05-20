@@ -10,6 +10,8 @@ Lint/RaiseException:
   Enabled: true
 Lint/StructNewOverride:
   Enabled: true
+Style/BlockComments:
+  Enabled: false
 Style/ExponentialNotation:
   Enabled: true
 Style/HashEachMethods:

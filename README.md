@@ -6,14 +6,42 @@ Ejercicio de backend para Resuelve tu Deuda.
 
 ## Requerimientos
 
-- Ruby 2.7.1
+- Ruby 2.4.10 < 2.7.1
+
+El requerimiento mínimo es Ruby 2.4.10, sin embargo ha sido probado en versiones posteriores como 2.5.8 y 2.7.1. Puede instalarse por medio de los repositorios
+oficiales o a través de [RVM](http://rvm.io/) o [RBENV](https://github.com/rbenv/rbenv).
 
 ## Instalación
 
-Ejecutar en consola:
+Instalación de Ruby mediante RVM / RBENV, se usa el comando rvm o rbenv dependiendo de la herramienta instalada:
 
 ```bash
-bundle install
+# Instalar la versión que deseemos.
+$ [rvm | rbenv] install 2.4.10
+
+# Usar la versión instalada.
+$ [rvm | rbenv] use 2.4.10
+```
+
+
+Configuración del proyecto:
+
+```bash
+# Clonar el repositorio del proyecto.
+$ git clone git@github.com:RoverWire/reto-resuelve.git
+
+# Instalar la gema bundler.
+$ gem install bundle
+
+# Descargar todas las gemas del proyecto.
+$ bundle install
+```
+
+Para iniciar la aplicación:
+
+```bash
+$ bundle exec rackup
+# Iniciará el servicio de la API y estará lista para recibir peticiones.
 ```
 
 ## Desarrollo
@@ -21,11 +49,15 @@ bundle install
 Para ejecutar en una máquina local:
 
 ```bash
-bundle exec rackup
+$ bundle exec guard
+# Iniciará la API y recargará la aplicación con los cambios de código.
+# Ejecutará rubocop con cada recarga para validar calidad de código.
 ```
 
-Si desea recargar rackup automáticamente al editar un archivo use:
+## Testing
+
+Si desea ejecutar las pruebas unitarias, en consola escriba:
 
 ```bash
-bundle exec guard
+bundle exec rspec
 ```
