@@ -2,3 +2,5 @@
 coverage/
 .rvmrc
 api/v2
+notes.txt
+.ruby-version
