@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'rack/test'
 require 'airborne'
-require_relative '../config/application'
+require_relative '../config/enviroment'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

@@ -1,19 +1,17 @@
+# Prueba Ingeniería Resuelve
 [![Build Status](https://travis-ci.org/RoverWire/reto-resuelve.svg?branch=master)](https://travis-ci.org/RoverWire/reto-resuelve) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/528d68f04e7f4c9c89eb1607e174707c)](https://www.codacy.com/manual/roverwire/reto-resuelve?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=RoverWire/reto-resuelve&amp;utm_campaign=Badge_Grade)
 
-# Prueba Ingeniería Resuelve
-
-Ejercicio de backend para Resuelve tu Deuda.
+API creada con [Grape](http://www.ruby-grape.org) para responder las peticiones planteadas en el [ejercicio de backend](https://github.com/resuelve/prueba-ing-backend) de Resuelve.
 
 ## Requerimientos
 
 - Ruby 2.4.10 < 2.7.1
 
-El requerimiento mínimo es Ruby 2.4.10, sin embargo ha sido probado en versiones posteriores como 2.5.8 y 2.7.1. Puede instalarse por medio de los repositorios
-oficiales o a través de [RVM](http://rvm.io/) o [RBENV](https://github.com/rbenv/rbenv).
+El requerimiento mínimo es Ruby 2.4.10, sin embargo ha sido probado en versiones posteriores como 2.5.8 y 2.7.1. Puede ser instalado por medio de los repositorios oficiales o a través de [RVM](http://rvm.io/) o [RBENV](https://github.com/rbenv/rbenv).
 
 ## Instalación
 
-Instalación de Ruby mediante RVM / RBENV, se usa el comando rvm o rbenv dependiendo de la herramienta instalada:
+Instalación de Ruby mediante RVM / RBENV, se usa el comando rvm o rbenv dependiendo de la herramienta previamente instalada:
 
 ```bash
 # Instalar la versión que deseemos.
@@ -22,7 +20,6 @@ $ [rvm | rbenv] install 2.4.10
 # Usar la versión instalada.
 $ [rvm | rbenv] use 2.4.10
 ```
-
 
 Configuración del proyecto:
 
