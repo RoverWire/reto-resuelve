@@ -40,4 +40,24 @@ module Helpers
       'equipo': 'azul'
     }
   end
+
+  def valid_team_settings
+    {
+      'equipo': 'azul',
+      'A': 2,
+      'B': 4,
+      'C': 6,
+      'Cuauh': 12
+    }
+  end
+
+  def invalid_team_settings
+    {
+      'nombre': 'azul',
+      'A': 2,
+      'B': 4,
+      'C': 6,
+      'Cuauh': 12
+    }
+  end
 end

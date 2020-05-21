@@ -25,7 +25,7 @@ module API
         end
 
         post '/' do
-          empty_data?
+          prevent_empty_data
 
           teams_setup = params[:teams_setup]
           PayrollService.new(params[:players_list], teams_setup).process

@@ -17,7 +17,7 @@ module API
         end
 
         post '/' do
-          empty_data?
+          prevent_empty_data
 
           PayrollService.new(params[:players_list]).process
         end

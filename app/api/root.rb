@@ -6,12 +6,13 @@ module API
     default_format :json
     prefix :api
     rescue_from EOFError do |e|
-      # Prevent empty request handling
+      # Prevent EOF error caused on POST multipart/form-data with no data
       error!("#{e} due empty request", 400)
     end
 
     helpers do
-      def empty_data?
+      # Prevent any request with no data or empty player list.
+      def prevent_empty_data
         return unless params.empty? || params[:players_list].empty?
 
         error!('No data provided', 400)
