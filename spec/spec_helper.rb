@@ -17,7 +17,7 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
 
-  # Inlcude Helpers
+  # include Helpers
   config.include Helpers
 end
 
