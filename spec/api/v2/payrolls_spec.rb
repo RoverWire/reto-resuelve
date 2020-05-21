@@ -61,9 +61,9 @@ describe API::V2::Payrolls do
     end
 
     context 'when receive valid list along invalid settings schema' do
-      let(:message) {
+      let(:message) do
         'teams_setup is invalid, teams_setup[equipo] is missing'
-      }
+      end
 
       before do
         post(
