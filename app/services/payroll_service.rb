@@ -8,6 +8,8 @@ class PayrollService
     @teams = []
   end
 
+  # Perform all the steps to calculate the payroll
+
   def process
     setup_teams
     setup_players
@@ -15,6 +17,9 @@ class PayrollService
 
     players
   end
+
+  # Create the players object array and
+  # updates team scores on the same loop.
 
   def setup_players
     provided_list.each do |item|
@@ -25,6 +30,9 @@ class PayrollService
     end
   end
 
+  # Creates all the teams, selecting distincts
+  # team names from the players list.
+
   def setup_teams
     provided_list.map { |item| item[:equipo] }.uniq.each do |item|
       team = Team.new(name: item) if Team.find(item, teams).nil?
@@ -32,6 +40,9 @@ class PayrollService
       @teams << team
     end
   end
+
+  # Make the operations to calculate
+  # the final payment for the player.
 
   def process_payrolls
     players.each do |player|

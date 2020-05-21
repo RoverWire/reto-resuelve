@@ -20,6 +20,9 @@ class Player
     @equipo = args[:equipo]
   end
 
+  # Method to calculate player's final payment
+  # using the required minimun goals and the team percentage
+
   def calculate_payroll(required_score, team_percentage)
     return if required_score.nil? || team_percentage.nil?
 
@@ -27,6 +30,9 @@ class Player
     percentage_earned = (player_percentage + team_percentage) / 2
     @sueldo_completo = sueldo + ((percentage_earned * bono) / 100)
   end
+
+  # Methods below are monkey patches to allow json output
+  # of the player objects.
 
   def as_json(*)
     {
