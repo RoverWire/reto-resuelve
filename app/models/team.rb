@@ -15,7 +15,7 @@ class Team
   end
 
   def calculate_percentage
-    return if percentage
+    return if percentage.positive?
 
     @percentage = (total_scored * 100) / total_required
   end

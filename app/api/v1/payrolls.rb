@@ -12,10 +12,6 @@ module API
       end
 
       resource :payrolls do
-        get '/' do
-          { message: 'It Works!' }
-        end
-
         params do
           requires :players_list, type: Array[JSON] do
             requires :nombre, type: String
