@@ -59,3 +59,37 @@ Si desea ejecutar las pruebas unitarias, en consola escriba:
 ```bash
 bundle exec rspec
 ```
+
+## Endpoints
+
+Actualmente existen dos endpoints, el primero requiere una variable `players_list` con una estructura de datos en el body, similar a la que se proporciona en las instrucciones. [Aquí puede encontrar un ejemplo](./spec/fixtures/v1_request.json).
+
+La URL para el endpoint de la versión 1:
+
+```
+POST http://localhost:9292/api/v1/payroll
+```
+
+El Segundo endpoint puede opcionalmente recibir un arreglo de configuraciones en un segundo parámetro llamado `teams_setup`. De igual manera pueden encontrar un [ejemplo de la llamada aquí](./spec/fixtures/v2_request.json).
+
+```
+POST http://localhost:9292/api/v1/payroll
+```
+
+En ambos casos se valida la estructura del JSON así como el tipo de valores que tienen cada llave. Consulte los archivos de referencia mencionados anteriormente.
+
+## Heroku
+
+Alternativamente, este repositorio se encuentra en un worker de heroku y esta listo para recibir peticiones en la siguiente URL:
+
+```
+POST https://api-reto-resuelve.herokuapp.com/api/v1/payroll
+
+POST https://api-reto-resuelve.herokuapp.com/api/v2/payroll
+```
+
+Si desea acceder a la documentación vía swagger:
+
+```
+POST https://api-reto-resuelve.herokuapp.com/api/swagger_doc
+```
