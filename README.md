@@ -54,7 +54,7 @@ $ docker-compose up
 Para verificar el funcionamiento, acceda a por navegador a:
 
 ```text
-POST http://localhost:9292/api/
+GET http://localhost:9292/api/
 # API de Prueba para Resuelve
 ```
 
