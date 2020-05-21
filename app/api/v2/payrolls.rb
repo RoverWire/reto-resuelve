@@ -24,6 +24,8 @@ module API
           end
         end
 
+        desc 'Calculates final payment and allow custom team settings.'
+
         post '/' do
           prevent_empty_data
 

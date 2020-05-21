@@ -21,5 +21,7 @@ module API
 
     mount API::V1::Payrolls
     mount API::V2::Payrolls
+
+    add_swagger_documentation
   end
 end

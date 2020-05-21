@@ -16,6 +16,8 @@ module API
           end
         end
 
+        desc 'Calculates final payment from a provided list.'
+
         post '/' do
           prevent_empty_data
 
