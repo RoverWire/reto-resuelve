@@ -19,6 +19,11 @@ module API
       end
     end
 
+    get '/' do
+      content_type 'text/plain'
+      body 'API de Prueba para Resuelve'
+    end
+
     mount API::V1::Payrolls
     mount API::V2::Payrolls
 
