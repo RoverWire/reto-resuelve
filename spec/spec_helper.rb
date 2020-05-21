@@ -2,6 +2,7 @@ require 'rubygems'
 require 'rack/test'
 require 'airborne'
 require_relative '../config/enviroment'
+require_relative './helpers'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -15,6 +16,9 @@ RSpec.configure do |config|
     # a real object. This is generally recommended.
     mocks.verify_partial_doubles = true
   end
+
+  # Inlcude Helpers
+  config.include Helpers
 end
 
 # Initialize Airborne to perform API requests.
