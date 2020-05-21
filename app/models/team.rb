@@ -33,7 +33,7 @@ class Team
   end
 
   def get_config_from_list(list)
-    return if list.empty?
+    return if list.blank?
 
     settings = list.select { |item| item['equipo'] == name }.first
     update_configuration(settings)

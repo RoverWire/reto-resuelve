@@ -1,6 +1,5 @@
 .bundle
 coverage/
 .rvmrc
-app/api/v2
 notes.txt
 .ruby-version

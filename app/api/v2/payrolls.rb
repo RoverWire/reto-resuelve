@@ -1,7 +1,7 @@
 module API
-  module V1
+  module V2
     class Payrolls < Grape::API
-      version :v1, using: :path
+      version :v2, using: :path
 
       resource :payrolls do
         params do
@@ -14,12 +14,21 @@ module API
             optional :sueldo_completo, type: Integer
             requires :equipo, type: String
           end
+
+          optional :teams_setup, type: Array[JSON] do
+            requires :equipo, type: String
+            requires :A, type: Integer
+            requires :B, type: Integer
+            requires :C, type: Integer
+            requires :Cuauh, type: Integer
+          end
         end
 
         post '/' do
           empty_data?
 
-          PayrollService.new(params[:players_list]).process
+          teams_setup = params[:teams_setup]
+          PayrollService.new(params[:players_list], teams_setup).process
         end
       end
     end
