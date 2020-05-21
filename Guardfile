@@ -1,7 +1,7 @@
 guard 'rack' do
-  watch(%r{^(config|api)/.*})
+  watch(%r{^(config|app)/.*})
 end
 
 guard 'rubocop' do
-  watch(%r{^(config|api)/.*})
+  watch(%r{^(config|app)/.*})
 end

@@ -20,6 +20,14 @@ class Player
     @equipo = args[:equipo]
   end
 
+  def calculate_payroll(required_score, team_percentage)
+    return if required_score.nil? || team_percentage.nil?
+
+    player_percentage = (goles * 100) / required_score
+    percentage_earned = (player_percentage + team_percentage) / 2
+    @sueldo_completo = sueldo + ((percentage_earned * bono) / 100)
+  end
+
   def as_json(*)
     {
       nombre: nombre,
