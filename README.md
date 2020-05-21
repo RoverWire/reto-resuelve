@@ -89,7 +89,7 @@ POST http://localhost:9292/api/v1/payroll
 El Segundo endpoint puede opcionalmente recibir un arreglo de configuraciones en un segundo parámetro llamado `teams_setup`. De igual manera pueden encontrar un [ejemplo de la llamada aquí](./spec/fixtures/v2_request.json).
 
 ```text
-POST http://localhost:9292/api/v1/payroll
+POST http://localhost:9292/api/v2/payroll
 ```
 
 En ambos casos se valida la estructura del JSON así como el tipo de valores que tienen cada llave. Consulte los archivos de referencia mencionados anteriormente.
