@@ -5,7 +5,9 @@ module API
 
       helpers do
         def empty_data?
-          params.empty? || params[:json].empty?
+          return unless params.empty? || params[:players_list].empty?
+
+          error!('No data provided', 400)
         end
       end
 
@@ -15,7 +17,7 @@ module API
         end
 
         params do
-          requires :json, type: Array[JSON] do
+          requires :players_list, type: Array[JSON] do
             requires :nombre, type: String
             requires :nivel, type: String, values: %w[A B C Cuauh]
             requires :goles, type: Integer
@@ -27,7 +29,7 @@ module API
         end
 
         post 'calculate' do
-          error!('No data provided', 400) if empty_data?
+          empty_data?
 
           { message: 'test' }
         end

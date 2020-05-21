@@ -10,6 +10,8 @@ Lint/RaiseException:
   Enabled: true
 Lint/StructNewOverride:
   Enabled: true
+Metrics/BlockLength:
+  ExcludedMethods: ['describe', 'context']
 Style/BlockComments:
   Enabled: false
 Style/ExponentialNotation:
