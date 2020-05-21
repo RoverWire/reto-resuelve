@@ -14,7 +14,7 @@ class Team
     @percentage = 0
   end
 
-  # Utility method to find the created object 
+  # Utility method to find the created object
   # by its team name
 
   def self.find(name, teams)
