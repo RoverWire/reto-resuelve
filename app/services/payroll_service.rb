@@ -20,17 +20,16 @@ class PayrollService
     provided_list.each do |item|
       player = Player.new(item)
       players << player
-
       Team.find(player.equipo, teams)
           .add_player_score(player.goles, player.nivel)
     end
   end
 
   def setup_teams
-    provided_list.map { |item| item['equipo'] }.uniq.each do |item|
-      team = Team.new(name: item)
+    provided_list.map { |item| item[:equipo] }.uniq.each do |item|
+      team = Team.new(name: item) if Team.find(item, teams).nil?
       team.get_config_from_list(config_list)
-      teams << team
+      @teams << team
     end
   end
 

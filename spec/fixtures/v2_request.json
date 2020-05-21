@@ -26,7 +26,6 @@
       "bono":10000,
       "sueldo_completo":null,
       "equipo":"azul"
-
    },
    {  
       "nombre":"El Rulo",
@@ -36,7 +35,6 @@
       "bono":15000,
       "sueldo_completo":null,
       "equipo":"rojo"
-
    }
  ],
 	"teams_setup":[

@@ -29,6 +29,7 @@ class Team
     return unless new_config
 
     new_config.delete('equipo')
+    new_config.delete(:equipo)
     @config = new_config
   end
 
