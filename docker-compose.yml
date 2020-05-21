@@ -1,0 +1,12 @@
+version: "3.1"
+services:
+  ruby:
+    build: ./
+    container_name: reto-resuelve
+    restart: unless-stopped
+    volumes:
+      - ./:/usr/src/app
+    environment:
+      - RACK_ENV=production
+    ports:
+      - 9292:9292

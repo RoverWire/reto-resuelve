@@ -42,6 +42,22 @@ $ bundle exec rackup
 # Iniciará el servicio de la API y estará lista para recibir peticiones.
 ```
 
+## Docker
+
+Se requiere tener instalado docker y docker compose. Para levantar el contenedor solo debe de ir a consola y teclear:
+
+```bash
+$ docker-compose up
+# Iniciará el proceso de creación del contenedor.
+```
+
+Para verificar el funcionamiento, acceda a por navegador a:
+
+```text
+POST http://localhost:9292/api/
+# API de Prueba para Resuelve
+```
+
 ## Desarrollo
 
 Para ejecutar en una máquina local:
@@ -66,13 +82,13 @@ Actualmente existen dos endpoints, el primero requiere una variable `players_lis
 
 La URL para el endpoint de la versión 1:
 
-```
+```text
 POST http://localhost:9292/api/v1/payroll
 ```
 
 El Segundo endpoint puede opcionalmente recibir un arreglo de configuraciones en un segundo parámetro llamado `teams_setup`. De igual manera pueden encontrar un [ejemplo de la llamada aquí](./spec/fixtures/v2_request.json).
 
-```
+```text
 POST http://localhost:9292/api/v1/payroll
 ```
 
@@ -82,7 +98,7 @@ En ambos casos se valida la estructura del JSON así como el tipo de valores que
 
 Alternativamente, este repositorio se encuentra en un worker de heroku y esta listo para recibir peticiones en la siguiente URL:
 
-```
+```text
 POST https://api-reto-resuelve.herokuapp.com/api/v1/payroll
 
 POST https://api-reto-resuelve.herokuapp.com/api/v2/payroll
@@ -90,6 +106,6 @@ POST https://api-reto-resuelve.herokuapp.com/api/v2/payroll
 
 Si desea acceder a la documentación vía swagger:
 
-```
+```text
 POST https://api-reto-resuelve.herokuapp.com/api/swagger_doc
 ```
