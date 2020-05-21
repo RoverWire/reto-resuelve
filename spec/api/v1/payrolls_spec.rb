@@ -10,10 +10,10 @@ describe API::V1::Payrolls do
     end
   end
 
-  describe 'POST /api/v1/payrolls/calculate' do
+  describe 'POST /api/v1/payrolls/' do
     context 'when receive an empty request' do
       before do
-        post '/api/v1/payrolls/calculate'
+        post '/api/v1/payrolls/'
       end
 
       it 'returns 400 response' do
@@ -28,7 +28,7 @@ describe API::V1::Payrolls do
     context 'when receive empty players list' do
       before do
         post(
-          '/api/v1/payrolls/calculate',
+          '/api/v1/payrolls/',
           '{ "players_list": [] }',
           { 'content_type' => 'application/json' }
         )
@@ -46,7 +46,7 @@ describe API::V1::Payrolls do
     context 'when receive invalid players_list' do
       before do
         post(
-          '/api/v1/payrolls/calculate',
+          '/api/v1/payrolls/',
           { players_list: { foo: 'test' } }
         )
       end
@@ -63,7 +63,7 @@ describe API::V1::Payrolls do
     context 'when receive a player with a missing attribute' do
       before do
         post(
-          '/api/v1/payrolls/calculate',
+          '/api/v1/payrolls/',
           { players_list: [player_without_salary] }
         )
       end
@@ -80,7 +80,7 @@ describe API::V1::Payrolls do
     context 'when receive a players list with a player with invalid schema' do
       before do
         post(
-          '/api/v1/payrolls/calculate',
+          '/api/v1/payrolls/',
           { players_list: [valid_player, player_without_salary] }
         )
       end
@@ -99,7 +99,7 @@ describe API::V1::Payrolls do
 
       before do
         post(
-          '/api/v1/payrolls/calculate',
+          '/api/v1/payrolls/',
           { players_list: [valid_player, player_with_invalid_level] }
         )
       end

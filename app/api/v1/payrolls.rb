@@ -12,7 +12,7 @@ module API
       end
 
       resource :payrolls do
-        get do
+        get '/' do
           { message: 'It Works!' }
         end
 
@@ -28,10 +28,10 @@ module API
           end
         end
 
-        post 'calculate' do
+        post '/' do
           empty_data?
 
-          { message: 'test' }
+          PayrollService.new(params[:players_list]).process
         end
       end
     end

@@ -1,5 +1,6 @@
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '../app/api'))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '../app/models'))
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '../app/services'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
 require 'boot'
