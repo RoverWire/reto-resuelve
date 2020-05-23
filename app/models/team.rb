@@ -10,12 +10,12 @@ class Team
     @name = args[:name]
     @total_required = 0
     @total_scored = 0
-    @config = { 'A' => 5, 'B' => 10, 'C' => 15, 'Cuauh' => 20 }
+    @config = { A: 5, B: 10, C: 15, Cuauh: 20 }
     @percentage = 0
   end
 
   # Utility method to find the created object
-  # by its team name
+  # within teams hash by its name
 
   def self.find(name, teams)
     teams.select { |team| team.name == name }.first
@@ -34,7 +34,7 @@ class Team
 
   def add_player_score(goals, level)
     @total_scored = total_scored + goals
-    @total_required = total_required + config[level]
+    @total_required = total_required + config[level.to_sym]
   end
 
   # Updates team custom settings. This can be used to parse
@@ -43,7 +43,7 @@ class Team
   def update_configuration(new_config)
     return unless new_config
 
-    new_config.delete('equipo')
+    new_config.transform_keys(&:to_sym)
     new_config.delete(:equipo)
     @config = new_config
   end

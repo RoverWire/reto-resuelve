@@ -51,7 +51,10 @@ class PayrollService
     players.each do |player|
       team = Team.find(player.equipo, teams)
       team.calculate_percentage
-      player.calculate_payroll(team.config[player.nivel], team.percentage)
+      player.calculate_payroll(
+        team.config[player.nivel.to_sym],
+        team.percentage
+      )
     end
   end
 end

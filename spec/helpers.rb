@@ -1,10 +1,10 @@
 module Helpers
-  def base_request
+  def base_request(use_symbols = false)
     current_path = File.join(File.dirname(__FILE__))
     file_path = File.join(current_path, 'fixtures', 'base_request.json')
-    response = IO.read(file_path)
+    content = IO.read(file_path)
 
-    JSON.parse(response)
+    JSON.parse(content, symbolize_names: use_symbols)
   end
 
   def valid_player

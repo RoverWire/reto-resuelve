@@ -107,5 +107,5 @@ POST https://api-reto-resuelve.herokuapp.com/api/v2/payroll
 Si desea acceder a la documentación vía swagger:
 
 ```text
-POST https://api-reto-resuelve.herokuapp.com/api/swagger_doc
+GET https://api-reto-resuelve.herokuapp.com/api/swagger_doc
 ```
