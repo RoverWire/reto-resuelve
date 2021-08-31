@@ -109,3 +109,5 @@ Si desea acceder a la documentación vía swagger:
 ```text
 GET https://api-reto-resuelve.herokuapp.com/api/swagger_doc
 ```
+
+El worker se mantiene actualizado mediante github actions enlazando este repositorio a heroku.
