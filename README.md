@@ -1,6 +1,5 @@
 # Prueba Ingeniería Resuelve
-
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/64a6a1d8ed684016986d26756f2893c1)](https://www.codacy.com/gh/RoverWire/reto-resuelve/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=RoverWire/reto-resuelve&amp;utm_campaign=Badge_Grade)
+![CI RSpec](https://github.com/roverwire/reto-resuelve/actions/workflows/rspec.yml/badge.svg) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/64a6a1d8ed684016986d26756f2893c1)](https://www.codacy.com/gh/RoverWire/reto-resuelve/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=RoverWire/reto-resuelve&amp;utm_campaign=Badge_Grade)
 
 API creada con [Grape](http://www.ruby-grape.org) para responder las peticiones planteadas en el [ejercicio de backend](https://github.com/resuelve/prueba-ing-backend) de Resuelve.
 
