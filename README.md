@@ -1,6 +1,6 @@
 # Prueba Ingeniería Resuelve
 
-[![Build Status](https://travis-ci.org/RoverWire/reto-resuelve.svg?branch=master)](https://travis-ci.org/RoverWire/reto-resuelve) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/64a6a1d8ed684016986d26756f2893c1)](https://www.codacy.com/gh/RoverWire/reto-resuelve/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=RoverWire/reto-resuelve&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/64a6a1d8ed684016986d26756f2893c1)](https://www.codacy.com/gh/RoverWire/reto-resuelve/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=RoverWire/reto-resuelve&amp;utm_campaign=Badge_Grade)
 
 API creada con [Grape](http://www.ruby-grape.org) para responder las peticiones planteadas en el [ejercicio de backend](https://github.com/resuelve/prueba-ing-backend) de Resuelve.
 
@@ -93,21 +93,3 @@ POST http://localhost:9292/api/v2/payroll
 ```
 
 En ambos casos se valida la estructura del JSON así como el tipo de valores que tienen cada llave. Consulte los archivos de referencia mencionados anteriormente.
-
-## Heroku
-
-Alternativamente, este repositorio se encuentra en un worker de heroku y esta listo para recibir peticiones en la siguiente URL:
-
-```text
-POST https://api-reto-resuelve.herokuapp.com/api/v1/payroll
-
-POST https://api-reto-resuelve.herokuapp.com/api/v2/payroll
-```
-
-Si desea acceder a la documentación vía swagger:
-
-```text
-GET https://api-reto-resuelve.herokuapp.com/api/swagger_doc
-```
-
-El worker se mantiene actualizado mediante github actions enlazando este repositorio a heroku.
